@@ -8,8 +8,9 @@
 #include "IFetch.h"
 #include "Fetch.generated.h"
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class UNREALFETCHEXAMPLE_API UFetch : public USceneComponent
+//UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS()
+class UNREALFETCHEXAMPLE_API UFetch : public UObject
 {
 	GENERATED_BODY()
 
@@ -20,5 +21,5 @@ public:
 public:	
 
 	UFUNCTION(BlueprintCallable)
-	UFetchRequest* Fetch(FString Url);
+	static UFetchRequest* Fetch(FString Url);
 };

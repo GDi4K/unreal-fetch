@@ -7,7 +7,7 @@
 // Sets default values for this component's properties
 UFetch::UFetch()
 {
-	PrimaryComponentTick.bCanEverTick = false;
+	
 }
 
 UFetchRequest* UFetch::Fetch(FString Url)
