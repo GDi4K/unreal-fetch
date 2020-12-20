@@ -26,6 +26,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	UFetchRequest* OnError(FFetchErrorDelegate Event);
 
+	UFUNCTION(BlueprintCallable)
+	UFetchRequest* OnJson(FFetchJsonResponseDelegate Event);
+
 private:
 	bool bStarted = false;
 	bool bFinished = false;
@@ -35,6 +38,7 @@ private:
 
 	FFetchTextResponseDelegate OnTextDelegate;
 	FFetchErrorDelegate OnErrorDelegate;
+	FFetchJsonResponseDelegate OnJsonDelegate;
 
 	void OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bSuccess);
 };
