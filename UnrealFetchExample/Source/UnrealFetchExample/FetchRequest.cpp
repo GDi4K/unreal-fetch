@@ -5,14 +5,11 @@
 
 UFetchRequest::UFetchRequest()
 {
-
+	FetchResponse = NewObject<UFetchResponse>();
 }
 
-void UFetchRequest::Process(FString Url, FFetchErrorDelegate OnError, FFetchResponseDelegate OnResponse)
+void UFetchRequest::Process(FString Url)
 {
-	ResponseHandler = OnResponse;
-	ErrorHandler = OnError;
-
 	FHttpRequestRef Request = FHttpModule::Get().CreateRequest();
 	Request->SetURL(Url);
 	Request->SetVerb("GET");
@@ -21,23 +18,41 @@ void UFetchRequest::Process(FString Url, FFetchErrorDelegate OnError, FFetchResp
 
 	Request->OnProcessRequestComplete().BindUObject(this, &UFetchRequest::OnResponse);
 	Request->ProcessRequest();
+	bStarted = true;
 }
 
 void UFetchRequest::OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bSuccess)
 {
+	bFinished = true;
+	bSuccessful = bSuccess;
+
 	if (!bSuccess)
 	{
 		if (Response.IsValid())
 		{
-			ErrorHandler.Execute("Request Failed with error: " + Response->GetContentAsString());
+			OnErrorDelegate.ExecuteIfBound("Request Failed with an error: " + Response->GetContentAsString());
 			return;
 		}
 
 
-		ErrorHandler.Execute("Request failed without making a request");
+		OnErrorDelegate.ExecuteIfBound("Request failed without making a request");
 		return;
 	}
 
-	int32 StatusCode = Response->GetResponseCode();
-	ResponseHandler.Execute(StatusCode, Response->GetContentAsString());
+	FetchResponse->StatusCode = Response->GetResponseCode();
+	FetchResponse->ResponseText = Response->GetContentAsString();
+
+	OnTextDelegate.ExecuteIfBound(FetchResponse->ResponseText, FetchResponse);
+}
+
+UFetchRequest* UFetchRequest::OnText(FFetchTextResponseDelegate Event)
+{
+	OnTextDelegate = Event;
+	return this;
+}
+
+UFetchRequest* UFetchRequest::OnError(FFetchErrorDelegate Event)
+{
+	OnErrorDelegate = Event;
+	return this;
 }

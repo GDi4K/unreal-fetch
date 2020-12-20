@@ -20,8 +20,5 @@ public:
 public:	
 
 	UFUNCTION(BlueprintCallable)
-	void Fetch(FString Url, FFetchErrorDelegate OnError, FFetchResponseDelegate OnResponse);
-
-private:
-	static FFetchErrorDelegate DefaultOnError;
+	UFetchRequest* Fetch(FString Url);
 };

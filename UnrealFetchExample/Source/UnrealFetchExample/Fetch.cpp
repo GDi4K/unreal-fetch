@@ -10,9 +10,11 @@ UFetch::UFetch()
 	PrimaryComponentTick.bCanEverTick = false;
 }
 
-void UFetch::Fetch(FString Url, FFetchErrorDelegate OnError, FFetchResponseDelegate OnResponse)
+UFetchRequest* UFetch::Fetch(FString Url)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Calling URL: %s"), *Url);
 	UFetchRequest* Request = NewObject<UFetchRequest>();
-	Request->Process(Url, OnError, OnResponse);
+	Request->Process(Url);
+
+	return Request;
 }
+
