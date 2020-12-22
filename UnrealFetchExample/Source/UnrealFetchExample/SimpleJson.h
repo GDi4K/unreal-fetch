@@ -27,6 +27,30 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	bool GetBool(FString Field);
 
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	bool IsNull(FString Field);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	bool IsNone(FString Field);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	bool IsEmpty(FString Field);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	USimpleJson* SetNumber(FString Field, float Value);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	USimpleJson* SetString(FString Field, FString Value);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	USimpleJson* SetBool(FString Field, bool Value);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	USimpleJson* SetObject(FString Field, USimpleJson* JsonObjet);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	FString Stringify();
+
 	static USimpleJson* Get(TSharedPtr<FJsonObject> Json);
 	static USimpleJson* GetInvalid();
 

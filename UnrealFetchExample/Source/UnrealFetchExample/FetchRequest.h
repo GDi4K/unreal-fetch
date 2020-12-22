@@ -18,7 +18,7 @@ class UNREALFETCHEXAMPLE_API UFetchRequest : public UObject
 
 public:
 	UFetchRequest();
-	void Process(FString URL);
+	void Process(FString URL, FFetchOptions Options);
 
 	UFUNCTION(BlueprintCallable)
 	UFetchRequest* OnText(FFetchTextResponseDelegate Event);
@@ -41,4 +41,5 @@ private:
 	FFetchJsonResponseDelegate OnJsonDelegate;
 
 	void OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bSuccess);
+	FString HttpMethodToString(FFetchOptionsMethod Method);
 };

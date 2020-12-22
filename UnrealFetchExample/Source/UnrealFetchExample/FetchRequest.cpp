@@ -8,13 +8,23 @@ UFetchRequest::UFetchRequest()
 	FetchResponse = NewObject<UFetchResponse>();
 }
 
-void UFetchRequest::Process(FString Url)
+void UFetchRequest::Process(FString Url, FFetchOptions Options)
 {
 	FHttpRequestRef Request = FHttpModule::Get().CreateRequest();
 	Request->SetURL(Url);
-	Request->SetVerb("GET");
+	Request->SetVerb(HttpMethodToString(Options.Method));
 	Request->SetHeader(TEXT("User-Agent"), TEXT("unreal-fetch"));
 	Request->SetHeader(TEXT("Content-Type"), TEXT("text/plain"));
+
+	for (int lc = 0; lc < Options.Headers.Num(); lc++) {
+		FFetchHeader Header = Options.Headers[lc];
+		Request->SetHeader(Header.Key, Header.Value);
+	}
+
+	if (Options.Method != GET)
+	{
+		Request->SetContentAsString(Options.Body);
+	}
 
 	Request->OnProcessRequestComplete().BindUObject(this, &UFetchRequest::OnResponse);
 	Request->ProcessRequest();
@@ -58,6 +68,26 @@ void UFetchRequest::OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Respons
 			OnErrorDelegate.ExecuteIfBound("Invalid JSON as the response");
 		}
 	}
+}
+
+FString UFetchRequest::HttpMethodToString(FFetchOptionsMethod Method)
+{
+	switch (Method)
+	{
+		case GET:
+			return "GET";
+
+		case POST:
+			return "POST";
+
+		case PUT:
+			return "PUT";
+
+		case DELETE:
+			return "DELETE";
+	}
+
+	return "";
 }
 
 UFetchRequest* UFetchRequest::OnText(FFetchTextResponseDelegate Event)

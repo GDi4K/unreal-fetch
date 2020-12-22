@@ -10,11 +10,17 @@ UFetch::UFetch()
 	
 }
 
-UFetchRequest* UFetch::Fetch(FString Url)
+UFetchRequest* UFetch::Fetch(FString Url, FFetchOptions Options)
 {
 	UFetchRequest* Request = NewObject<UFetchRequest>();
-	Request->Process(Url);
+	Request->Process(Url, Options);
 
 	return Request;
+}
+
+USimpleJson* UFetch::MakeJson()
+{
+	TSharedPtr<FJsonObject> NativeJsonObject = MakeShared<FJsonObject>();
+	return USimpleJson::Get(NativeJsonObject);
 }
 
