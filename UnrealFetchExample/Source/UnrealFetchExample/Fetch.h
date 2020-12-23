@@ -24,5 +24,5 @@ public:
 	static UFetchRequest* Fetch(FString Url, FFetchOptions Options);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure)
-	static USimpleJson* MakeJson();
+	static USimpleJsonValue* MakeJson(FString inputJson);
 };

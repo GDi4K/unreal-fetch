@@ -18,9 +18,18 @@ UFetchRequest* UFetch::Fetch(FString Url, FFetchOptions Options)
 	return Request;
 }
 
-USimpleJson* UFetch::MakeJson()
+USimpleJsonValue* UFetch::MakeJson(FString InputJson)
 {
-	TSharedPtr<FJsonObject> NativeJsonObject = MakeShared<FJsonObject>();
-	return USimpleJson::Get(NativeJsonObject);
-}
+	TSharedPtr<FJsonValue> ParsedJSON;
+	TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(InputJson);
+	if (FJsonSerializer::Deserialize(Reader, ParsedJSON))
+	{
+		return USimpleJsonValue::Get(ParsedJSON);
+	}
 
+	UE_LOG(LogTemp, Warning, TEXT("This is invalid"));
+	
+	TSharedRef<TJsonReader<>> Reader2 = TJsonReaderFactory<>::Create(InputJson);
+	FJsonSerializer::Deserialize(Reader2, ParsedJSON);
+	return USimpleJsonValue::Get(ParsedJSON);
+}

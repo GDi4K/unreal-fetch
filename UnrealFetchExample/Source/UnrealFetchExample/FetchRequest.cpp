@@ -62,7 +62,7 @@ void UFetchRequest::OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Respons
 		if (FJsonSerializer::Deserialize(Reader, ParsedJSON))
 		{
 			UE_LOG(LogTemp, Warning, TEXT("JSON Parsing Success: %d"), ParsedJSON->GetObjectField("data")->GetIntegerField("id"))
-			OnJsonDelegate.ExecuteIfBound(USimpleJson::Get(ParsedJSON), FetchResponse);
+			OnJsonDelegate.ExecuteIfBound(USimpleJsonObject::Get(ParsedJSON), FetchResponse);
 		}
 		else {
 			OnErrorDelegate.ExecuteIfBound("Invalid JSON as the response");
