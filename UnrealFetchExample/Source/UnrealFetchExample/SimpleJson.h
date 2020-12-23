@@ -49,7 +49,7 @@ public:
 	USimpleJson* SetObject(FString Field, USimpleJson* JsonObjet);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure)
-	FString Stringify();
+	FString Stringify(bool pretty = false);
 
 	static USimpleJson* Get(TSharedPtr<FJsonObject> Json);
 	static USimpleJson* GetInvalid();

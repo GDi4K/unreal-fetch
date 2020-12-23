@@ -137,11 +137,20 @@ USimpleJson* USimpleJson::SetObject(FString Field, USimpleJson* JsonObjet)
 	return this;
 }
 
-FString USimpleJson::Stringify()
+FString USimpleJson::Stringify(bool pretty)
 {
 	FString OutputString;
-	TSharedRef< FCondensedJsonStringWriter > Writer = FCondensedJsonStringWriterFactory::Create(&OutputString);
-	FJsonSerializer::Serialize(Original.ToSharedRef(), Writer);
+	if (pretty)
+	{
+		TSharedRef< FPrettyJsonStringWriter > Writer = FPrettyJsonStringWriterFactory::Create(&OutputString);
+		FJsonSerializer::Serialize(Original.ToSharedRef(), Writer);
+	}
+	else
+	{
+		TSharedRef< FCondensedJsonStringWriter > Writer = FCondensedJsonStringWriterFactory::Create(&OutputString);
+		FJsonSerializer::Serialize(Original.ToSharedRef(), Writer);
+	}
+	
 	return OutputString;
 }
 
