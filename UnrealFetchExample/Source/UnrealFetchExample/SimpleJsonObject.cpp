@@ -180,6 +180,11 @@ FString USimpleJsonObject::Stringify(bool pretty)
 	return OutputString;
 }
 
+USimpleJsonValue* USimpleJsonObject::AsValue()
+{
+	return USimpleJsonValue::Get(MakeShared<FJsonValueObject>(Original));
+}
+
 USimpleJsonObject* USimpleJsonObject::Get(TSharedPtr<FJsonObject> Json)
 {
 	USimpleJsonObject* JsonObjet = NewObject<USimpleJsonObject>();

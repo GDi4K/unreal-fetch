@@ -55,6 +55,22 @@ public:
 		TArray<FFetchHeader> Headers;
 };
 
+USTRUCT(BlueprintType)
+struct UNREALFETCHEXAMPLE_API FFetchJsonOptions
+{
+	GENERATED_BODY()
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TEnumAsByte<FFetchOptionsMethod> Method = FFetchOptionsMethod::GET;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		USimpleJsonValue* Body;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<FFetchHeader> Headers;
+};
+
 /**
  * 
  */

@@ -23,5 +23,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	static UFetchRequest* Fetch(FString Url, FFetchOptions Options);
 
-	
+	UFUNCTION(BlueprintCallable)
+	static UFetchRequest* FetchJson(FString Url, FFetchJsonOptions Options);
 };

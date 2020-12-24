@@ -57,6 +57,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		FString Stringify(bool pretty = false);
 
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		USimpleJsonValue* AsValue();
+
 	static USimpleJsonObject* Get(TSharedPtr<FJsonObject> Json);
 	static USimpleJsonObject* GetInvalid();
 
