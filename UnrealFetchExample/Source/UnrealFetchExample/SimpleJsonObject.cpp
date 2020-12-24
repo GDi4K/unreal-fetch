@@ -151,6 +151,18 @@ USimpleJsonObject* USimpleJsonObject::SetObject(FString Field, USimpleJsonObject
 	return this;
 }
 
+USimpleJsonObject* USimpleJsonObject::SetArray(FString Field, TArray<USimpleJsonValue*> Value)
+{
+	TArray<TSharedPtr<FJsonValue>> Arr;
+	for (USimpleJsonValue* Item : Value)
+	{
+		Arr.Push(Item->Original);
+	}
+
+	Original->SetArrayField(Field, Arr);
+	return this;
+}
+
 FString USimpleJsonObject::Stringify(bool pretty)
 {
 	FString OutputString;

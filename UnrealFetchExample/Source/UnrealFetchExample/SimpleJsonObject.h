@@ -9,7 +9,7 @@
 /**
  *
  */
-UCLASS()
+UCLASS(BlueprintType)
 class UNREALFETCHEXAMPLE_API USimpleJsonObject : public UObject
 {
 	GENERATED_BODY()
@@ -50,6 +50,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		USimpleJsonObject* SetObject(FString Field, USimpleJsonObject* JsonObjet);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		USimpleJsonObject* SetArray(FString Field, TArray<USimpleJsonValue*> Value);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		FString Stringify(bool pretty = false);

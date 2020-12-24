@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "SimpleJsonValue.h"
 #include "UObject/NoExportTypes.h"
 #include "SimpleJson.generated.h"
 
@@ -13,48 +15,20 @@ UCLASS()
 class UNREALFETCHEXAMPLE_API USimpleJson : public UObject
 {
 	GENERATED_BODY()
-	
-public:
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	bool GetObject(FString Field, USimpleJson*& JsonObjet);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	float GetNumber(FString Field);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	FString GetString(FString Field);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	bool GetBool(FString Field);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	bool IsNull(FString Field);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	bool IsNone(FString Field);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	bool IsEmpty(FString Field);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	USimpleJson* SetNumber(FString Field, float Value);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	USimpleJson* SetString(FString Field, FString Value);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	USimpleJson* SetBool(FString Field, bool Value);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	USimpleJson* SetObject(FString Field, USimpleJson* JsonObjet);
-
-	UFUNCTION(BlueprintCallable, BlueprintPure)
-	FString Stringify(bool pretty = false);
-
-	static USimpleJson* Get(TSharedPtr<FJsonObject> Json);
-	static USimpleJson* GetInvalid();
 
 public:
-	TSharedPtr<FJsonObject> Original;
-	bool invalidJson = false;
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	static USimpleJsonValue* MakeJson(FString InputJson);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	static USimpleJsonValue* MakeJsonNumber(float Number);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	static USimpleJsonValue* MakeJsonBool(bool Value);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	static USimpleJsonValue* MakeJsonString(FString Value);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	static USimpleJsonValue* MakeJsonNull();
 };

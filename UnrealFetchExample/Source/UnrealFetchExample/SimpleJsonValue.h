@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(BlueprintType)
 class UNREALFETCHEXAMPLE_API USimpleJsonValue : public UObject
 {
 	GENERATED_BODY()
