@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "Types.h"
+#include "Runtime/Online/HTTP/Public/Http.h"
 #include "FetchResponse.generated.h"
 
 /**
@@ -20,4 +22,16 @@ class UNREALFETCHEXAMPLE_API UFetchResponse : public UObject
 
 		UPROPERTY(BlueprintReadOnly);
 		FString ResponseText;
+
+		UPROPERTY(BlueprintReadOnly);
+		TArray<FFetchHeader> Headers;
+
+	private:
+		FHttpResponsePtr Original;
+
+	public:
+		UFUNCTION(BlueprintCallable, BlueprintPure)
+		FString GetHeader(FString Key);
+
+		static UFetchResponse* Get(FHttpResponsePtr Response);
 };

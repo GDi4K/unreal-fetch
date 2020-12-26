@@ -5,7 +5,7 @@
 
 UFetchRequest::UFetchRequest()
 {
-	FetchResponse = NewObject<UFetchResponse>();
+	
 }
 
 void UFetchRequest::Process(FString Url, FFetchOptions Options)
@@ -49,8 +49,7 @@ void UFetchRequest::OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Respons
 		return;
 	}
 
-	FetchResponse->StatusCode = Response->GetResponseCode();
-	FetchResponse->ResponseText = Response->GetContentAsString();
+	FetchResponse = UFetchResponse::Get(Response);
 
 	OnTextDelegate.ExecuteIfBound(FetchResponse->ResponseText, FetchResponse);
 
@@ -61,7 +60,6 @@ void UFetchRequest::OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Respons
 	if (OnJsonDelegate.IsBound()) {
 		if (FJsonSerializer::Deserialize(Reader, ParsedJSON))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("JSON Parsing Success: %d"), ParsedJSON->GetObjectField("data")->GetIntegerField("id"))
 			OnJsonDelegate.ExecuteIfBound(USimpleJsonObject::Get(ParsedJSON), FetchResponse);
 		}
 		else {
