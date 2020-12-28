@@ -10,23 +10,20 @@ typedef TJsonWriter< TCHAR, TCondensedJsonPrintPolicy<TCHAR> > FCondensedJsonStr
 typedef TJsonWriterFactory< TCHAR, TPrettyJsonPrintPolicy<TCHAR> > FPrettyJsonStringWriterFactory;
 typedef TJsonWriter< TCHAR, TPrettyJsonPrintPolicy<TCHAR> > FPrettyJsonStringWriter;
 
-bool USimpleJsonObject::GetObject(FString Field, USimpleJsonObject*& JsonObjet)
+USimpleJsonObject* USimpleJsonObject::GetObject(FString Field)
 {
 	if (invalidJson) {
-		JsonObjet = this;
-		return false;
+		return this;
 	}
 
 	bool validField = Original->HasTypedField<EJson::Object>(Field);
 	if (!validField)
 	{
-		JsonObjet = USimpleJsonObject::GetInvalid();
-		return false;
+		return USimpleJsonObject::GetInvalid();
 	}
 
 	TSharedPtr<FJsonObject> Result = Original->GetObjectField(Field);
-	JsonObjet = USimpleJsonObject::Get(Result);
-	return true;
+	return USimpleJsonObject::Get(Result);
 }
 
 float USimpleJsonObject::GetNumber(FString Field)

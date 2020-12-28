@@ -17,7 +17,7 @@ class UNREALFETCH_API USimpleJsonObject : public UObject
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
-		bool GetObject(FString Field, USimpleJsonObject*& JsonObjet);
+		USimpleJsonObject* GetObject(FString Field);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		float GetNumber(FString Field);
