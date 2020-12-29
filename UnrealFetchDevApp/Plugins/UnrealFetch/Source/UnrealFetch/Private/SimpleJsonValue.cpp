@@ -37,6 +37,11 @@ TArray<USimpleJsonValue*> USimpleJsonValue::AsArray()
 	return Arr;
 }
 
+bool USimpleJsonValue::IsNull()
+{
+	return Original->IsNull();
+}
+
 USimpleJsonValue* USimpleJsonValue::Get(TSharedPtr<FJsonValue> Original)
 {
 	USimpleJsonValue* JsonValue = NewObject<USimpleJsonValue>();

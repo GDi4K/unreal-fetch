@@ -32,6 +32,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		TArray<USimpleJsonValue*> AsArray();
 
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		bool IsNull();
+
 	static USimpleJsonValue* Get(TSharedPtr<FJsonValue> JsonValue);
 
 public:
