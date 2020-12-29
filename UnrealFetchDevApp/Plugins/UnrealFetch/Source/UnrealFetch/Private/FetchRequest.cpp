@@ -54,13 +54,13 @@ void UFetchRequest::OnResponse(FHttpRequestPtr Request, FHttpResponsePtr Respons
 	OnTextDelegate.ExecuteIfBound(FetchResponse->ResponseText, FetchResponse);
 
 	// JSON parsing
-	TSharedPtr<FJsonObject> ParsedJSON;
+	TSharedPtr<FJsonValue> ParsedJSON;
 	TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(FetchResponse->ResponseText);
 
 	if (OnJsonDelegate.IsBound()) {
 		if (FJsonSerializer::Deserialize(Reader, ParsedJSON))
 		{
-			OnJsonDelegate.ExecuteIfBound(USimpleJsonObject::Get(ParsedJSON), FetchResponse);
+			OnJsonDelegate.ExecuteIfBound(USimpleJsonValue::Get(ParsedJSON), FetchResponse);
 		}
 		else {
 			OnErrorDelegate.ExecuteIfBound("Invalid JSON as the response");
