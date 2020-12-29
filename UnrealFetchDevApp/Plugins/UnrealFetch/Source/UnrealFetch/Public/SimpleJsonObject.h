@@ -61,6 +61,9 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 		USimpleJsonValue* AsValue();
 
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+		bool IsValidObject();
+
 	static USimpleJsonObject* Get(TSharedPtr<FJsonObject> Json);
 	static USimpleJsonObject* GetInvalid();
 

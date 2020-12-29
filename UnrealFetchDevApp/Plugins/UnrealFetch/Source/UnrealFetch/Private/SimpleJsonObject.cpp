@@ -182,6 +182,11 @@ USimpleJsonValue* USimpleJsonObject::AsValue()
 	return USimpleJsonValue::Get(MakeShared<FJsonValueObject>(Original));
 }
 
+bool USimpleJsonObject::IsValidObject()
+{
+	return !invalidJson;
+}
+
 USimpleJsonObject* USimpleJsonObject::Get(TSharedPtr<FJsonObject> Json)
 {
 	USimpleJsonObject* JsonObjet = NewObject<USimpleJsonObject>();

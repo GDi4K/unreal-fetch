@@ -14,8 +14,6 @@ USimpleJsonValue* USimpleJson::MakeJson(FString InputJson)
 		return USimpleJsonValue::Get(ParsedJSON);
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("This is invalid"));
-
 	TSharedRef<TJsonReader<>> Reader2 = TJsonReaderFactory<>::Create("{}");
 	FJsonSerializer::Deserialize(Reader2, ParsedJSON);
 	return USimpleJsonValue::Get(ParsedJSON);
