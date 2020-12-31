@@ -12,7 +12,7 @@
  *
  */
 UCLASS()
-class UNREALFETCH_API UFetchRequest : public UObject
+class FETCH_API UFetchRequest : public UObject
 {
 	GENERATED_BODY()
 

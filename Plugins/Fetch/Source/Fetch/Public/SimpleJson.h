@@ -12,7 +12,7 @@
  * 
  */
 UCLASS()
-class UNREALFETCH_API USimpleJson : public UObject
+class FETCH_API USimpleJson : public UObject
 {
 	GENERATED_BODY()
 

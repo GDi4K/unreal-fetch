@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 
-class FUnrealFetchModule : public IModuleInterface
+class FFetchModule : public IModuleInterface
 {
 public:
 

@@ -2,7 +2,7 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "UnrealFetch",
+	"FriendlyName": "Fetch",
 	"Description": "The Fetch API inspired HTTP client for Unreal Engine. Supports both Blueprints & C++.",
 	"Category": "Network",
 	"CreatedBy": "Arunoda Susiripala",
@@ -16,7 +16,7 @@
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "UnrealFetch",
+			"Name": "Fetch",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

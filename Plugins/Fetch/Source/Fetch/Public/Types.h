@@ -19,7 +19,7 @@ enum FFetchOptionsMethod
 };
 
 USTRUCT(BlueprintType)
-struct UNREALFETCH_API FFetchHeader
+struct FETCH_API FFetchHeader
 {
 	GENERATED_BODY()
 
@@ -32,7 +32,7 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct UNREALFETCH_API FFetchOptions
+struct FETCH_API FFetchOptions
 {
 	GENERATED_BODY()
 
@@ -48,7 +48,7 @@ public:
 };
 
 USTRUCT(BlueprintType)
-struct UNREALFETCH_API FFetchJsonOptions
+struct FETCH_API FFetchJsonOptions
 {
 	GENERATED_BODY()
 
@@ -67,7 +67,7 @@ public:
  * 
  */
 UCLASS()
-class UNREALFETCH_API UTypes : public UObject
+class FETCH_API UTypes : public UObject
 {
 	GENERATED_BODY()
 	

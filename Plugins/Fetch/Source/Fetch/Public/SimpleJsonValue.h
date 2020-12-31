@@ -12,7 +12,7 @@
  *
  */
 UCLASS(BlueprintType)
-class UNREALFETCH_API USimpleJsonValue : public UObject
+class FETCH_API USimpleJsonValue : public UObject
 {
 	GENERATED_BODY()
 

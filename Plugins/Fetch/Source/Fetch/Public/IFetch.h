@@ -23,7 +23,7 @@ DECLARE_DYNAMIC_DELEGATE_TwoParams(FFetchJsonResponseDelegate, USimpleJsonValue*
  * 
  */
 UCLASS()
-class UNREALFETCH_API UIFetch : public UObject
+class FETCH_API UIFetch : public UObject
 {
 	GENERATED_BODY()
 	

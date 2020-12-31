@@ -6,17 +6,17 @@
 #include "Components/SceneComponent.h"
 #include "Runtime/Online/HTTP/Public/Http.h"
 #include "IFetch.h"
-#include "Fetch.generated.h"
+#include "FetchAPI.generated.h"
 
 //UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 UCLASS()
-class UNREALFETCH_API UFetch : public UObject
+class FETCH_API UFetchAPI : public UObject
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this component's properties
-	UFetch();
+	UFetchAPI();
 
 public:
 
