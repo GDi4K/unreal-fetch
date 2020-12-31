@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright (c) 2020 Arunoda Susiripala. All Rights Reserved.
 
 #include "UnrealFetch.h"
 
