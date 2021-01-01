@@ -22,14 +22,14 @@ This plugin is tested with UE 4.26 & 4.25. Since this plugin uses some built-in 
 
 This plugin exposes a set of static functions & classes to work with both HTTP & manage JSON. You can use them inside Blueprints & there's no need to use C++.
 
-* [Hello World - Making a POST Request](https://blueprintue.com/blueprint/5kzpvcy-/)
-* [Working with JSON](https://blueprintue.com/blueprint/ljxc4m-r/)
-* [Check Response Headers](https://blueprintue.com/blueprint/ohmwhzgq/)
-* [Check Status Code](https://blueprintue.com/blueprint/brnay_vo/)
-* [Handle Errors](https://blueprintue.com/blueprint/nz_f0ft8/)
-* [Use Custom Headers](https://blueprintue.com/blueprint/fp23f8dd/)
-* [Runtime JSON Validation](https://blueprintue.com/blueprint/8mu596ho/)
-* [Working with Arrays](https://blueprintue.com/blueprint/49qsthhq/)
+* [Hello World - Making a POST Request](https://blueprintue.com/blueprint/kxwkx692/)
+* [Working with JSON](https://blueprintue.com/blueprint/2ayz0vbn/)
+* [Check Response Headers](https://blueprintue.com/blueprint/xof4e7_w/)
+* [Check Status Code](https://blueprintue.com/blueprint/2p_7qg05/)
+* [Handle Errors](https://blueprintue.com/blueprint/tixgg4iv/)
+* [Use Custom Headers](https://blueprintue.com/blueprint/4g6x2y-h/)
+* [Runtime JSON Validation](https://blueprintue.com/blueprint/foc1vk8h/)
+* [Working with Arrays](https://blueprintue.com/blueprint/k4fbbdse/)
 
 ## Functional Test Suite
 
