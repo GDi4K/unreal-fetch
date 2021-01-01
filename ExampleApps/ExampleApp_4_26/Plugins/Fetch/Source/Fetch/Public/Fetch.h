@@ -1,11 +1,11 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
+// Copyright (c) 2020 Arunoda Susiripala. All Rights Reserved.
 
 #pragma once
 
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
 
-class FUnrealFetchModule : public IModuleInterface
+class FFetchModule : public IModuleInterface
 {
 public:
 

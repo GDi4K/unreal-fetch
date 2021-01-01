@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright (c) 2020 Arunoda Susiripala. All Rights Reserved.
 
 #pragma once
 
@@ -11,7 +11,7 @@
  *
  */
 UCLASS(BlueprintType)
-class UNREALFETCH_API USimpleJsonObject : public UObject
+class FETCH_API USimpleJsonObject : public UObject
 {
 	GENERATED_BODY()
 
