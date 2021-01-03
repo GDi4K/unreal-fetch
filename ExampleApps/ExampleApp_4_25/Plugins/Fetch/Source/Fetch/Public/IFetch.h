@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright (c) 2020 Arunoda Susiripala. All Rights Reserved.
 
 #pragma once
 
@@ -23,7 +23,7 @@ DECLARE_DYNAMIC_DELEGATE_TwoParams(FFetchJsonResponseDelegate, USimpleJsonValue*
  * 
  */
 UCLASS()
-class UNREALFETCH_API UIFetch : public UObject
+class FETCH_API UIFetch : public UObject
 {
 	GENERATED_BODY()
 	

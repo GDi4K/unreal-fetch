@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class UnrealFetch : ModuleRules
+public class Fetch : ModuleRules
 {
-	public UnrealFetch(ReadOnlyTargetRules Target) : base(Target)
+	public Fetch(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		
