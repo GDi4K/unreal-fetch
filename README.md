@@ -6,6 +6,15 @@ The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using
 
 **[Watch the Demo](https://www.youtube.com/watch?v=DPVwaP792MA&feature=youtu.be)**
 
+## Features
+
+With this plugin, you can talk to HTTP APIs very quickly from Blueprints. Here are some core features:
+
+* No C++ or configurations needs when using with Blueprints
+* Talk to HTTP Apis with a minimal amount of Blueprint nodes
+* Allow to parse & make JSON values via Blueprints
+* Works anywhere since this uses internal HTTP & JSON related modules.
+
 ## Installation
 
 **<sub>This plugin will be available via Unreal Marketplace soon.</sub>**
@@ -22,7 +31,12 @@ This plugin is tested with UE 4.26 & 4.25. Since this plugin uses some built-in 
 
 ## Usage with Blueprints
 
-This plugin exposes a set of static functions & classes to work with both HTTP & manage JSON. You can use them inside Blueprints & there's no need to use C++.
+**[Watch this video](https://www.youtube.com/watch?v=DPVwaP792MA&feature=youtu.be)** for step by step instructions on how to use this plugin.
+
+Once installed, you can use the `Fetch` static function inside Blueprints to talk to any HTTP API. Here's [an example](https://blueprintue.com/blueprint/kxwkx692/) on invoking a HTTP POST request & extracting the email from the response JSON.
+
+Refer to the following examples for more usage:<br/>
+<sup>(You can copy blueprint nodes from the following examples & directly paste them inside your blueprints.)</sup>
 
 * [Hello World - Making a POST Request](https://blueprintue.com/blueprint/kxwkx692/)
 * [Working with JSON](https://blueprintue.com/blueprint/2ayz0vbn/)

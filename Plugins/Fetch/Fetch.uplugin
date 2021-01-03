@@ -22,5 +22,6 @@
 		}
 	],
 	"EngineVersion": "4.26.0",
-	"MarketplaceURL": ""
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e8098c9d0b414ad4924296c8a4495668",
+	"WhitelistPlatforms": [ "Win64", "Win32", "Mac", "IOS", "Android", "PS4", "XboxOne" ]
 }
