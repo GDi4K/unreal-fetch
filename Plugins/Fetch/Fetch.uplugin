@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "1.0.0",
+	"VersionName": "1.0.1",
 	"FriendlyName": "Fetch",
 	"Description": "The Fetch API inspired HTTP client for Unreal Engine. Supports both Blueprints & C++.",
 	"Category": "Network",
@@ -14,14 +14,22 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+	"EngineVersion": "4.26.0",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e8098c9d0b414ad4924296c8a4495668",
 	"Modules": [
 		{
 			"Name": "Fetch",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32",
+				"Mac",
+				"IOS",
+				"Android",
+				"PS4",
+				"XboxOne"
+			]
 		}
-	],
-	"EngineVersion": "4.26.0",
-	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/e8098c9d0b414ad4924296c8a4495668",
-	"WhitelistPlatforms": [ "Win64", "Win32", "Mac", "IOS", "Android", "PS4", "XboxOne" ]
+	]
 }
