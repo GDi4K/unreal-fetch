@@ -17,18 +17,18 @@ class FETCH_API USimpleJson : public UObject
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintPure)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
 	static USimpleJsonValue* MakeJson(FString InputJson);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
 	static USimpleJsonValue* MakeJsonNumber(float Number);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
 	static USimpleJsonValue* MakeJsonBool(bool Value);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
 	static USimpleJsonValue* MakeJsonString(FString Value);
 
-	UFUNCTION(BlueprintCallable, BlueprintPure)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
 	static USimpleJsonValue* MakeJsonNull();
 };

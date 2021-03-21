@@ -30,7 +30,7 @@ private:
 	FHttpResponsePtr Original;
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintPure)
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
 		FString GetHeader(FString Key);
 
 	static UFetchResponse* Get(FHttpResponsePtr Response);

@@ -7,6 +7,7 @@ public class Fetch : ModuleRules
 	public Fetch(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+		PrecompileForTargets = PrecompileTargetsType.Any;
 		
 		PublicIncludePaths.AddRange(
 			new string[] {
@@ -54,3 +55,4 @@ public class Fetch : ModuleRules
 			);
 	}
 }
+

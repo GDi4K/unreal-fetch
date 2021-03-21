@@ -20,9 +20,9 @@ public:
 
 public:
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Scripting | Javascript")
 		static UFetchRequest* Fetch(FString Url, FFetchOptions Options);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "Scripting | Javascript")
 		static UFetchRequest* FetchJson(FString Url, FFetchJsonOptions Options);
 };
