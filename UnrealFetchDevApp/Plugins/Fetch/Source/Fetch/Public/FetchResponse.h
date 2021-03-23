@@ -17,13 +17,13 @@ class FETCH_API UFetchResponse : public UObject
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(BlueprintReadOnly);
+	UPROPERTY(BlueprintReadOnly, Category = "Scripting | Javascript");
 	int32 StatusCode;
 
-	UPROPERTY(BlueprintReadOnly);
+	UPROPERTY(BlueprintReadOnly, Category = "Scripting | Javascript");
 	FString ResponseText;
 
-	UPROPERTY(BlueprintReadOnly);
+	UPROPERTY(BlueprintReadOnly, Category = "Scripting | Javascript");
 	TArray<FFetchHeader> Headers;
 
 private:

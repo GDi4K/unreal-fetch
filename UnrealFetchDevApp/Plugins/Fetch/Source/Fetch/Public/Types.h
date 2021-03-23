@@ -24,10 +24,10 @@ struct FETCH_API FFetchHeader
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		FString Key;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		FString Value;
 };
 
@@ -37,13 +37,13 @@ struct FETCH_API FFetchOptions
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		TEnumAsByte<FFetchOptionsMethod> Method = FFetchOptionsMethod::GET;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		FString Body;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		TArray<FFetchHeader> Headers;
 };
 
@@ -53,13 +53,13 @@ struct FETCH_API FFetchJsonOptions
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		TEnumAsByte<FFetchOptionsMethod> Method = FFetchOptionsMethod::GET;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		USimpleJsonValue* Body;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scripting | Javascript")
 		TArray<FFetchHeader> Headers;
 };
 
