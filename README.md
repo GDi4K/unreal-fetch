@@ -48,6 +48,7 @@ Refer to the following examples for more usage:<br/>
 * [Use Custom Headers](https://blueprintue.com/blueprint/4g6x2y-h/)
 * [Runtime JSON Validation](https://blueprintue.com/blueprint/foc1vk8h/)
 * [Working with Arrays](https://blueprintue.com/blueprint/k4fbbdse/)
+* [Basic Auth Example](https://blueprintue.com/blueprint/cv0dcy71/)
 
 ## Functional Test Suite
 
