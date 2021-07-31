@@ -20,13 +20,13 @@ public:
 	UFetchRequest();
 	void Process(FString URL, FFetchOptions Options);
 
-	UFUNCTION(BlueprintCallable, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, Category = "Fetch | Request")
 		UFetchRequest* OnText(FFetchTextResponseDelegate Event);
 
-	UFUNCTION(BlueprintCallable, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, Category = "Fetch | Request")
 		UFetchRequest* OnError(FFetchErrorDelegate Event);
 
-	UFUNCTION(BlueprintCallable, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, Category = "Fetch | Request")
 		UFetchRequest* OnJson(FFetchJsonResponseDelegate Event);
 
 private:

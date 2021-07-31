@@ -38,3 +38,13 @@ UFetchRequest* UFetchAPI::FetchJson(FString Url, FFetchJsonOptions Options)
 
 	return Fetch(Url, RealOptions);
 }
+
+FFetchHeader UFetchAPI::MakeBasicAuthHeader(FString Username, FString Password)
+{
+	FFetchHeader Header;
+
+	Header.Key = "Authorization";
+	Header.Value = "Basic " + FBase64::Encode(Username + ":" + Password);
+	
+	return Header;
+}

@@ -3,6 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+
+#include "FetchRequest.h"
 #include "Components/SceneComponent.h"
 #include "Runtime/Online/HTTP/Public/Http.h"
 #include "IFetch.h"
@@ -20,9 +23,12 @@ public:
 
 public:
 
-	UFUNCTION(BlueprintCallable, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, Category = "Fetch")
 		static UFetchRequest* Fetch(FString Url, FFetchOptions Options);
 
-	UFUNCTION(BlueprintCallable, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, Category = "Fetch")
 		static UFetchRequest* FetchJson(FString Url, FFetchJsonOptions Options);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Fetch | Headers")
+		static FFetchHeader MakeBasicAuthHeader(FString Username, FString Password);
 };

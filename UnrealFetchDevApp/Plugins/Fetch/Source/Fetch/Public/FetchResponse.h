@@ -17,20 +17,20 @@ class FETCH_API UFetchResponse : public UObject
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(BlueprintReadOnly, Category = "Scripting | Javascript");
+	UPROPERTY(BlueprintReadOnly, Category = "Fetch | Response");
 	int32 StatusCode;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Scripting | Javascript");
+	UPROPERTY(BlueprintReadOnly, Category = "Fetch | Response");
 	FString ResponseText;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Scripting | Javascript");
+	UPROPERTY(BlueprintReadOnly, Category = "Fetch | Response");
 	TArray<FFetchHeader> Headers;
 
 private:
 	FHttpResponsePtr Original;
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | Response")
 		FString GetHeader(FString Key);
 
 	static UFetchResponse* Get(FHttpResponsePtr Response);

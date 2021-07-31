@@ -17,22 +17,22 @@ class FETCH_API USimpleJsonValue : public UObject
 	GENERATED_BODY()
 
 public:
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
 		float AsNumber();
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
 		FString AsString();
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
 		bool AsBool();
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
 		USimpleJsonObject* AsObject();
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
 		TArray<USimpleJsonValue*> AsArray();
 
-	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Scripting | Javascript")
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
 		bool IsNull();
 
 	static USimpleJsonValue* Get(TSharedPtr<FJsonValue> JsonValue);
