@@ -48,3 +48,11 @@ FFetchHeader UFetchAPI::MakeBasicAuthHeader(FString Username, FString Password)
 	
 	return Header;
 }
+
+FFetchHeader UFetchAPI::MakeOAuthHeader(FString Token)
+{
+	return {
+		"Authorization",
+		"Bearer " + Token
+	};
+}

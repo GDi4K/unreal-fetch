@@ -31,4 +31,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Fetch | Headers")
 		static FFetchHeader MakeBasicAuthHeader(FString Username, FString Password);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Fetch | Headers")
+        static FFetchHeader MakeOAuthHeader(FString Token);
 };
