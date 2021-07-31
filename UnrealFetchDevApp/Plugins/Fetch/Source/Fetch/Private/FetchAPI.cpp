@@ -3,6 +3,7 @@
 
 #include "FetchAPI.h"
 #include "FetchRequest.h"
+#include "Misc/Base64.h"
 
 // Sets default values for this component's properties
 UFetchAPI::UFetchAPI()
