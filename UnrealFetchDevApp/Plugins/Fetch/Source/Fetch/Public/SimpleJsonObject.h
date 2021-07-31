@@ -43,6 +43,9 @@ public:
 		bool IsEmpty(FString Field);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonObject")
+        bool HasKey(FString Field);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonObject")
 		USimpleJsonObject* SetNumber(FString Field, float Value);
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonObject")

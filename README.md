@@ -40,15 +40,21 @@ Once installed, you can use the `Fetch` static function inside Blueprints to tal
 Refer to the following examples for more usage:<br/>
 <sup>(You can copy blueprint nodes from the following examples & directly paste them inside your blueprints.)</sup>
 
+**For Fetch**
+
 * [Hello World - Making a POST Request](https://blueprintue.com/blueprint/kxwkx692/)
 * [Working with JSON](https://blueprintue.com/blueprint/2ayz0vbn/)
 * [Check Response Headers](https://blueprintue.com/blueprint/xof4e7_w/)
 * [Check Status Code](https://blueprintue.com/blueprint/2p_7qg05/)
 * [Handle Errors](https://blueprintue.com/blueprint/tixgg4iv/)
 * [Use Custom Headers](https://blueprintue.com/blueprint/4g6x2y-h/)
-* [Runtime JSON Validation](https://blueprintue.com/blueprint/foc1vk8h/)
 * [Working with Arrays](https://blueprintue.com/blueprint/k4fbbdse/)
 * [Basic Auth Example](https://blueprintue.com/blueprint/cv0dcy71/)
+
+**For JSON**
+
+* [Check for there's a key or not](https://blueprintue.com/blueprint/okwmyljw/)
+* [Runtime JSON Validation](https://blueprintue.com/blueprint/foc1vk8h/)
 
 ## Functional Test Suite
 

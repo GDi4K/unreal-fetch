@@ -81,6 +81,15 @@ TArray<USimpleJsonValue*> USimpleJsonObject::GetArray(FString Field)
 	return Arr;
 }
 
+bool USimpleJsonObject::HasKey(FString Field)
+{
+	if (invalidJson) {
+		return false;
+	}
+
+	return Original->HasField(Field);
+}
+
 bool USimpleJsonObject::IsNull(FString Field)
 {
 	if (invalidJson) {
