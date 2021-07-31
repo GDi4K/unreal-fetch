@@ -35,8 +35,12 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
 		bool IsNull();
 
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
+        bool IsValid();
+
 	static USimpleJsonValue* Get(TSharedPtr<FJsonValue> JsonValue);
 
 public:
 	TSharedPtr<FJsonValue> Original;
+	bool InvalidJson = false;
 };

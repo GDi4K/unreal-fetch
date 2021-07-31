@@ -16,7 +16,10 @@ USimpleJsonValue* USimpleJson::MakeJson(FString InputJson)
 
 	TSharedRef<TJsonReader<>> Reader2 = TJsonReaderFactory<>::Create("{}");
 	FJsonSerializer::Deserialize(Reader2, ParsedJSON);
-	return USimpleJsonValue::Get(ParsedJSON);
+	USimpleJsonValue* InvalidJson =  USimpleJsonValue::Get(ParsedJSON);
+	InvalidJson->InvalidJson = true;
+
+	return InvalidJson;
 }
 
 USimpleJsonValue* USimpleJson::MakeJsonNumber(float Value)

@@ -42,6 +42,11 @@ bool USimpleJsonValue::IsNull()
 	return Original->IsNull();
 }
 
+bool USimpleJsonValue::IsValid()
+{
+	return !InvalidJson;
+}
+
 USimpleJsonValue* USimpleJsonValue::Get(TSharedPtr<FJsonValue> Original)
 {
 	USimpleJsonValue* JsonValue = NewObject<USimpleJsonValue>();

@@ -54,7 +54,7 @@ Refer to the following examples for more usage:<br/>
 **For JSON**
 
 * [Check for there's a key or not](https://blueprintue.com/blueprint/okwmyljw/)
-* [Runtime JSON Validation](https://blueprintue.com/blueprint/foc1vk8h/)
+* [Runtime JSON Validation](https://blueprintue.com/blueprint/dnpnrs8m/)
 
 ## Functional Test Suite
 
