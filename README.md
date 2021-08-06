@@ -43,18 +43,20 @@ Refer to the following examples for more usage:<br/>
 **For Fetch**
 
 * [Hello World - Making a POST Request](https://blueprintue.com/blueprint/kxwkx692/)
-* [Working with JSON](https://blueprintue.com/blueprint/2ayz0vbn/)
 * [Check Response Headers](https://blueprintue.com/blueprint/xof4e7_w/)
 * [Check Status Code](https://blueprintue.com/blueprint/2p_7qg05/)
 * [Handle Errors](https://blueprintue.com/blueprint/tixgg4iv/)
 * [Use Custom Headers](https://blueprintue.com/blueprint/4g6x2y-h/)
-* [Working with Arrays](https://blueprintue.com/blueprint/k4fbbdse/)
-* [Basic Auth Example](https://blueprintue.com/blueprint/cv0dcy71/)
+* [Using BasicAuth](https://blueprintue.com/blueprint/cv0dcy71/)
 
 **For JSON**
-
+* [Basic JSON Usage](https://blueprintue.com/blueprint/2ayz0vbn/)
+* [Working with Arrays](https://blueprintue.com/blueprint/k4fbbdse/)
 * [Check for there's a key or not](https://blueprintue.com/blueprint/okwmyljw/)
 * [Runtime JSON Validation](https://blueprintue.com/blueprint/dnpnrs8m/)
+* [Get an item inside an Array](https://blueprintue.com/blueprint/wj-v1k6i/)
+* [Loop through a JSON Array](https://blueprintue.com/blueprint/umgnh13w/)
+* [Find a specific item in a JSON Array](https://blueprintue.com/blueprint/l4cwvkqj/)
 
 ## Functional Test Suite
 
