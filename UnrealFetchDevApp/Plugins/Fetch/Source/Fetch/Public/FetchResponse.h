@@ -11,7 +11,7 @@
 /**
  *
  */
-UCLASS()
+UCLASS(BlueprintType)
 class FETCH_API UFetchResponse : public UObject
 {
 	GENERATED_BODY()

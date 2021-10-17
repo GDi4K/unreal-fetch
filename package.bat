@@ -13,3 +13,6 @@ xcopy UnrealFetchDevApp\Plugins\Fetch\Resources ToPackage\Fetch\Resources /E/H
 
 md ToPackage\Fetch\Source
 xcopy UnrealFetchDevApp\Plugins\Fetch\Source ToPackage\Fetch\Source /E/H
+
+md ToPackage\Fetch\Content
+xcopy UnrealFetchDevApp\Plugins\Fetch\Content ToPackage\Fetch\Content /E/H

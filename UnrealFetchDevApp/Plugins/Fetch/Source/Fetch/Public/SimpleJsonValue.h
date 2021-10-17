@@ -18,25 +18,67 @@ class FETCH_API USimpleJsonValue : public UObject
 
 public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
-		float AsNumber();
+	float AsNumber();
+
+	UFUNCTION(BlueprintCallable, Category = "Fetch | SimpleJsonValue")
+	float AsNumberSync()
+	{
+		return AsNumber();
+	}
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
-		FString AsString();
+	FString AsString();
+
+	UFUNCTION(BlueprintCallable, Category = "Fetch | SimpleJsonValue")
+	FString AsStringSync()
+	{
+		return AsString();
+	}
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
-		bool AsBool();
+	bool AsBool();
+
+	UFUNCTION(BlueprintCallable, Category = "Fetch | SimpleJsonValue")
+	bool AsBoolSync()
+	{
+		return AsBool();
+	}
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
-		USimpleJsonObject* AsObject();
+	USimpleJsonObject* AsObject();
+	
+	UFUNCTION(BlueprintCallable, Category = "Fetch | SimpleJsonValue")
+	USimpleJsonObject* AsObjectSync()
+	{
+		return AsObject();
+	}
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
-		TArray<USimpleJsonValue*> AsArray();
+	TArray<USimpleJsonValue*> AsArray();
+
+	UFUNCTION(BlueprintCallable, Category = "Fetch | SimpleJsonValue")
+		TArray<USimpleJsonValue*> AsArraySync()
+	{
+		return AsArray();
+	}
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
-		bool IsNull();
+	bool IsNull();
+
+	UFUNCTION(BlueprintCallable, Category = "Fetch | SimpleJsonValue")
+	bool IsNullSync()
+	{
+		return IsNull();
+	}
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Fetch | SimpleJsonValue")
-        bool IsValid();
+	bool IsValid();
+
+	UFUNCTION(BlueprintCallable, Category = "Fetch | SimpleJsonValue")
+	bool IsValidSync()
+	{
+		return IsValid();
+	}
 
 	static USimpleJsonValue* Get(TSharedPtr<FJsonValue> JsonValue);
 
