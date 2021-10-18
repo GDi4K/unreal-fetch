@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1,
-	"VersionName": "2.0.0",
+	"VersionName": "2.1.0",
 	"FriendlyName": "Fetch",
 	"Description": "The Fetch API inspired HTTP client for Unreal Engine. Supports both Blueprints & C++.",
 	"Category": "Network",
