@@ -25,7 +25,7 @@ For non-commercial projects, you can also get it from GitHub. Follow these instr
 * Close your existing Unreal Engine app.
 * Create a directory in your app root called `Plugins`.
 * Download [this](https://github.com/GameDev4K/unreal-fetch/archive/main.zip) GitHub repository.
-* Copy `Plugins/UnrealFetch` of the repository to above created `Plugins` directory.
+* Copy `UnrealFetchDevApp/Plugins/Fetch` of the repository to above created `Plugins` directory.
 * Start your app & it will ask to compile the plugin. Proceed with that.
 * You might need to [setup Visual Studio](https://docs.unrealengine.com/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/index.html) for Unreal Engine.
 
