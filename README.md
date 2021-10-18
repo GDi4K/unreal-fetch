@@ -17,7 +17,7 @@ With this plugin, you can talk to HTTP APIs very quickly from Blueprints. Here a
 
 ## Installation
 
-[**Get the Plugin via the Unreal Marketplace.**](https://www.unrealengine.com/marketplace/en-US/product/fetch-a-simple-http-client)
+[**🛍 Get the Plugin via the Unreal Marketplace.**](https://www.unrealengine.com/marketplace/en-US/product/fetch-a-simple-http-client)
 <br/>
 
 For non-commercial projects, you can also get it from GitHub. Follow these instructions to install:
