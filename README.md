@@ -17,11 +17,10 @@ With this plugin, you can talk to HTTP APIs very quickly from Blueprints. Here a
 
 ## Installation
 
-[**This plugin is available on the Unreal Marketplace.**](https://www.unrealengine.com/marketplace/en-US/product/fetch-a-simple-http-client)
+[**Get the Plugin via the Unreal Marketplace.**](https://www.unrealengine.com/marketplace/en-US/product/fetch-a-simple-http-client)
 <br/>
-<sub>[ [Read more](#about-licence--charging-on-the-marketplace) on why we charge for this plugin on the marketplace. ]</sub>
 
-Follow these steps to install this plugin via the source.
+For non-commercial projects, you can also get it from GitHub. Follow these instructions to install:
 
 * Close your existing Unreal Engine app.
 * Create a directory in your app root called `Plugins`.
@@ -69,16 +68,6 @@ Here's how to access & run them:
 * Open the test runner with `Windows -> Test Automation`.
 * Open the Automation tab & search for `Functional Tests`.
 * Select all those tests & run them all.
-
-## About Licence & Charging on the Marketplace
-
-We [sell this plugin](https://www.unrealengine.com/marketplace/en-US/product/fetch-a-simple-http-client) on the unreal marketplace for 4.99 USD. 
-
-As you already know, you can get this plugin for FREE via this repository. Since the plugin is under the MIT license, you can even use this plugin for any purpose without paying.
-
-If you get this plugin via the marketplace, you will get the pre-compiled version & you can get updates instantly. But if you get it from this repository, you need to compile it locally and manually check for updates.
-
-We do this to cover the development cost (we hope to 😁) while allowing everyone to use this plugin even if they couldn't afford to pay.
 
 ## Bugs, Questions & Features
 
