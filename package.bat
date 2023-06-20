@@ -35,11 +35,18 @@ xcopy ToPackage\Fetch_46 ToPackage\Fetch_51 /E/H
 
 cscript //NoLogo sed.vbs s/(4.26.0)/5.1.0/ < ToPackage\Fetch_46\Fetch.uplugin > ToPackage\Fetch_51\Fetch.uplugin
 
+echo "Copying the 5.2 version"
+md ToPackage\Fetch_52
+xcopy ToPackage\Fetch_46 ToPackage\Fetch_52 /E/H
+
+cscript //NoLogo sed.vbs s/(4.26.0)/5.2.0/ < ToPackage\Fetch_46\Fetch.uplugin > ToPackage\Fetch_52\Fetch.uplugin
+
 @REM Identifying the version
 FOR /F "tokens=*" %%g IN ('git describe --tags') do (SET VERSION=%%g)
 
 @REM Making zip files
 cd ToPackage
+tar.exe -a -c -f Fetch_52_%VERSION%.zip Fetch_52
 tar.exe -a -c -f Fetch_51_%VERSION%.zip Fetch_51
 tar.exe -a -c -f Fetch_50_%VERSION%.zip Fetch_50
 tar.exe -a -c -f Fetch_47_%VERSION%.zip Fetch_47
